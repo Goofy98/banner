@@ -1,2 +1,2 @@
 # banner
-banner 轮播 dome
+banner 的轮播 demo

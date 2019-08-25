@@ -1,12 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">	
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>jquery.glide.js 轻量级的幻灯片插件</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<!-- Slider Plugin -->
+		<script type="text/javascript" src="./jquery.glide.js"></script>
+		
+		<style>
+			/**
+			 * Demo styles
+			 * Only for example purposes
+			 * Remove in production
+			 */
+			
+			/* Bad and ugly reset */
+			*{ margin: 0; padding: 0; border: 0; }
+	
+
+			.box {
+				width: 100%; 
+				height: 100%;
+				line-height: 5;
+				text-align: center;
+				font-size: 5em;
+				color: #fff;
+				text-transform: capitalize;
+				vertical-align:middle; 
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="slider">
+			<ul class="slides">
+				<li class="slide"><div class="box" style="background-color: #1abc9c;">slide1</div></li>
+				<li class="slide"><div class="box" style="background-color: #16a085;">slide2</div></li>
+				<li class="slide"><div class="box" style="background-color: #f1c40f;">slide3</div></li>
+				<li class="slide"><div class="box" style="background-color: #f39c12;">slide4</div></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			var glide = $('.slider').glide({
+					animationTime:500, //动画过度效果，只有当浏览器支持CSS3的时候生效
+					arrows:true, //是否显示左右导航器
+					arrowsWrapperClass: "arrowsWrapper",//滑块箭头导航器外部DIV类名
+					arrowMainClass: "slider-arrow",//滑块箭头公共类名
+					arrowRightClass:"slider-arrow--right",//滑块右箭头类名
+					arrowLeftClass:"slider-arrow--left",//滑块左箭头类名
+					arrowRightText:">",//定义左右导航器文字或者符号也可以是类
+					arrowLeftText:"<",
+					nav:true, //主导航器也就是本例中显示的小方块
+					navCenter:true, //主导航器位置是否居中
+					navClass:"slider-nav",//主导航器外部div类名
+					navItemClass:"slider-nav__item", //本例中小方块的样式
+					navCurrentItemClass:"slider-nav__item--current" //被选中后的样式
+				});	
+		</script>
+	</body>
 </html>
